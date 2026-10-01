@@ -1552,6 +1552,17 @@ h2.section-title .t-coral{color:var(--rust)}
 .uc-step.human{border:2px solid var(--gold);color:var(--gold);background:var(--gold-soft);font-weight:800}
 .uc-arrow{color:var(--gold);font-size:22px;font-weight:800;line-height:1}
 @media(max-width:600px){.uc-flow{flex-direction:column}.uc-arrow{transform:rotate(90deg)}}
+.oq{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;margin-left:6px;vertical-align:middle;border-radius:50%;border:none;background:var(--gold);color:var(--paper-deep);font:800 11px/1 'JetBrains Mono',ui-monospace,monospace;cursor:help}
+.oq:hover,.oq:focus{background:var(--rust)}
+.gloss-card .tt{display:block;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:9.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--paper-deep);margin-bottom:4px}
+.progress-rail{position:absolute;left:0;right:0;bottom:-1px;height:3px;background:transparent;pointer-events:none}
+.progress-fill{height:100%;width:0;background:var(--gold);transition:width .08s linear}
+.nav a.active{color:var(--gold);opacity:1}
+.nav a.active .num{color:var(--gold)}
+.back-top{position:fixed;right:22px;bottom:84px;z-index:70;width:40px;height:40px;border-radius:50%;border:1px solid var(--rule);background:var(--paper-deep);color:var(--ink);font-size:18px;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .2s}
+.back-top.show{opacity:1;pointer-events:auto}
+.back-top:hover{color:var(--gold);border-color:var(--gold)}
+body.export-mode .back-top,body.export-mode .progress-rail{display:none}
 </style>
 </head>
 <body>
@@ -1560,6 +1571,7 @@ h2.section-title .t-coral{color:var(--rust)}
 <span class="paradigm-logo" role="img" aria-label="Paradigm Case Management"></span>
 <span class="topbar-divider"></span>
 <span class="topbar-title">Ethical AI in Prosecution</span>
+<div class="progress-rail"><div class="progress-fill" id="progressFill"></div></div>
 </header>
 
 <div class="layout">
@@ -1642,14 +1654,14 @@ h2.section-title .t-coral{color:var(--rust)}
 <!-- ============ §00 THE QUESTION ============ -->
 <section id="why-q" class="bigq">
 <div class="bigq-eyebrow">00 · The question</div>
-<h2 class="bigq-text">Why are we <em>here</em>?</h2>
+<h2 class="bigq-text">Why Are We <em>Here</em>?</h2>
 <p class="bigq-lede">This is the moment that <em>decides</em> what prosecution becomes. <strong>We are the ones who lead it.</strong></p>
 </section>
 
 <!-- ============ §01 DEFINE ETHICAL AI ============ -->
 <section id="define" class="section black">
 <div class="eyebrow"><span>01 · The work in front of us</span></div>
-<h2 class="section-title">We must define <em style="color:#9CD27D">ethical AI</em> for ourselves.</h2>
+<h2 class="section-title">We Must Define <em style="color:#9CD27D">Ethical AI</em> for Ourselves.</h2>
 
 <div class="define-manifesto">
 <p class="manifesto-prelude">What do we mean when we say:</p>
@@ -1658,7 +1670,7 @@ h2.section-title .t-coral{color:var(--rust)}
 
 <div class="define-context">
 <p>Over the past year, AI has appeared in <strong>every digital tool</strong> in this office, and the pace is accelerating. If each tool automates its own slice of the work, <strong>at what point have we outsourced prosecution?</strong></p>
-<p>At what point do the people who set our budgets (local, state, federal) decide we need fewer paralegals and fewer attorneys, because of "AI efficiency"?</p>
+<p>At what point do the people who set our budgets (local, state, federal) decide we need fewer paralegals and fewer attorneys, because of "AI efficiency"?<span class="gloss oq" tabindex="0" aria-label="Open question">?<span class="gloss-card"><span class="tt">Open question</span>At what point does automating slices of the work amount to outsourcing the role, and who decides we are replaceable?</span></span></p>
 <p class="define-context-close"><strong>What will we point to as <em>irreplaceable</em>?</strong></p>
 </div>
 </section>
@@ -1666,7 +1678,7 @@ h2.section-title .t-coral{color:var(--rust)}
 <!-- ============ §02 EXISTENTIAL SLIPPERY SLOPE ============ -->
 <section id="slope" class="section">
 <div class="eyebrow"><span>02 · The challenge of judgment</span></div>
-<h2 class="section-title">The <em>existential</em> slippery slope.</h2>
+<h2 class="section-title">The <em>Existential</em> Slippery Slope.</h2>
 <p class="caption-1">Each new tool automates one more slice of the work. Alone, each looks harmless. The line we have to hold is between AI that <strong>helps us decide</strong> and AI that <strong>decides for us</strong>.</p>
 
 <!-- Graduated spectrum — feel the tension increase, left to right -->
@@ -1747,8 +1759,8 @@ h2.section-title .t-coral{color:var(--rust)}
 </div>
 <ul class="bw-q-list">
 <li>When it works as intended, what are we gaining?</li>
-<li>For the piece being automated, how much time, effort, or overall cost are you really saving?</li>
-<li>How good is the feature actually at its intended task?</li>
+<li>For the piece being automated, how much time, effort, or cost are you saving?</li>
+<li>How good is the feature at its intended task?</li>
 </ul>
 </div>
 <div class="bw-vs">vs.</div>
@@ -1785,7 +1797,7 @@ h2.section-title .t-coral{color:var(--rust)}
 <line x1="78" y1="62" x2="88" y2="64" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
 </symbol>
 </svg>
-<div class="eyebrow"><span>A worked progression · Diversion Review</span></div>
+<div class="eyebrow"><span>03 · A worked progression · Diversion Review</span></div>
 <h2 class="section-title"><span class="tag-pill">Diversion Review</span> <span class="vscrawl">v1 &rarr; v2.1</span></h2>
 <p class="prog-intro">The <em>same</em> capability &mdash; flag incoming cases for diversion review &mdash; built four different ways. Same task. Same data. Completely different ethical standing.</p>
 
@@ -1948,8 +1960,8 @@ h2.section-title .t-coral{color:var(--rust)}
 
 <!-- ============ §03 THE CONSEQUENCES OF INDECISION (formerly liability) ============ -->
 <section id="liability" class="section black">
-<div class="eyebrow"><span>03 · The consequences of indecision · May 2026</span></div>
-<h2 class="section-title">The <em>consequences</em> of indecision.</h2>
+<div class="eyebrow"><span>04 · The consequences of indecision · May 2026</span></div>
+<h2 class="section-title">The <em>Consequences</em> of Indecision.</h2>
 <p class="caption-1">Twelve months ago these were edge cases. They are not edge cases anymore. The last twenty months in our profession: <em>AI in every product</em>, <em>data leaks</em> from the model layer, and <em>career-ending filings</em> from attorneys who did not know to check.</p>
 
 <div class="liability-grid">
@@ -1971,7 +1983,7 @@ h2.section-title .t-coral{color:var(--rust)}
 <div class="incident">
 <div class="incident-date">Nov 2024 · Minnesota AG</div>
 <div class="incident-where">Chief prosecutor's expert declaration excluded</div>
-<p class="incident-what">In a case <em>about deepfakes</em>, the state's chief prosecutor sponsored an expert declaration containing AI-hallucinated citations. The court excluded the declaration. The AG office had to apologize.</p>
+<p class="incident-what">In a case <em>about deepfakes</em>, the state's chief prosecutor sponsored an expert declaration containing AI-<span class="gloss" tabindex="0" data-g="hallucination">hallucinated</span> citations. The court excluded the declaration. The AG office had to apologize.</p>
 <div class="incident-cite"><a href="https://www.gtlaw.com/en/insights/2025/12/expert-testimony-in-the-age-of-generative-ai-recent-case-developments" target="_blank" rel="noopener">Kohls v. Ellison, D. Minn. · Greenberg Traurig analysis</a></div>
 </div>
 
@@ -1980,9 +1992,9 @@ h2.section-title .t-coral{color:var(--rust)}
 <p class="trajectory-pivot">Imagine what it will look like <em>next year</em>. In <span style="color:#F08B72;font-style:italic;font-weight:700">two years</span>.</p>
 </section>
 <section id="strategy" class="section">
-<div class="eyebrow"><span>04 · Our actionable strategy</span></div>
+<div class="eyebrow"><span>05 · Our actionable strategy</span></div>
 
-<h2 class="strat-h">Our <em>actionable</em> strategy</h2>
+<h2 class="strat-h">Our <em>Actionable</em> Strategy</h2>
 
 <p class="strat-why-lead">Prosecutors study human nature for a living. We have seen how desperation distorts judgment, how "justice" gets rationalized, how careful people slip one small choice at a time.</p>
 
@@ -2038,8 +2050,8 @@ h2.section-title .t-coral{color:var(--rust)}
 
 <!-- ============ §10 THE VOCABULARY ============ -->
 <section id="defs" class="section black">
-<div class="eyebrow"><span>05 · The vocabulary</span></div>
-<h2 class="section-title">Three tools.<br>One question:<em class="centered-q">Should I take this case to trial?</em></h2>
+<div class="eyebrow"><span>06 · The vocabulary</span></div>
+<h2 class="section-title">Three Tools.<br>One Question:<em class="centered-q">Should I Take This Case to Trial?</em></h2>
 
 <div class="tools-grid">
 
@@ -2156,8 +2168,8 @@ Show me the alibi statements.
 
 <!-- ============ §13 DOCUMENT EXTRACTOR ============ -->
 <section id="extract" class="section">
-<div class="eyebrow"><span>Use Case · Human-in-the-loop Agent: Extraction</span></div>
-<h2 class="section-title">Extract any document.<br><span style="color:#9CD27D">Human in the loop.</span></h2>
+<div class="eyebrow"><span>07 · Use Case · Human-in-the-loop Agent: Extraction</span></div>
+<h2 class="section-title">Extract Any Document.<br><span style="color:#9CD27D">Human in the loop.</span></h2>
 <div class="uc-block">
 <p class="uc-dont">&ldquo;Don't let an AI agent write data to your database.&rdquo;</p>
 <div class="uc-instead">Instead</div>
@@ -2211,8 +2223,8 @@ Show me the alibi statements.
 
 <!-- ============ §14 PRIMARY SOURCE FINDER ============ -->
 <section id="psf" class="section black">
-<div class="eyebrow"><span>06 · AI finds. It never interprets.</span></div>
-<h2 class="section-title"><span style="color:#9CD27D">The source.</span> Never the answer.</h2>
+<div class="eyebrow"><span>08 · AI finds. It never interprets.</span></div>
+<h2 class="section-title"><span style="color:#9CD27D">The Source.</span> Never the Answer.</h2>
 <div class="uc-block">
 <p class="uc-dont">&ldquo;Don't let AI replace your human discernment.&rdquo;</p>
 <div class="uc-instead">Instead</div>
@@ -2332,8 +2344,8 @@ The agent did not say "the injuries are consistent with strangulation." It did n
 
 <!-- ============ §15 AI AS SECOND-CHAIR ============ -->
 <section id="critique" class="section">
-<div class="eyebrow"><span>07 · AI reviews. It never writes for you.</span></div>
-<h2 class="section-title">Writing is <span style="color:var(--gold)">Thinking...</span></h2>
+<div class="eyebrow"><span>09 · AI reviews. It never writes for you.</span></div>
+<h2 class="section-title">Writing Is <span style="color:var(--gold)">Thinking...</span></h2>
 <div class="uc-block">
 <p class="uc-dont">&ldquo;Don't let AI speak for you.&rdquo;</p>
 <div class="uc-instead">Instead</div>
@@ -2396,8 +2408,8 @@ The agent did not say "the injuries are consistent with strangulation." It did n
 
 <!-- ============ §16 ADMIN CONFIGURER ============ -->
 <section id="configure" class="section black">
-<div class="eyebrow"><span>08 · AI guides. The user makes the change.</span></div>
-<h2 class="section-title"><span style="color:#9CD27D">Improvement</span>, without the paywall.</h2>
+<div class="eyebrow"><span>10 · AI guides. The user makes the change.</span></div>
+<h2 class="section-title"><span style="color:#9CD27D">Improvement</span>, Without the Paywall.</h2>
 <div class="uc-block">
 <p class="uc-dont">&ldquo;Don't let your technology shape your work.&rdquo;</p>
 <div class="uc-instead">Instead</div>
@@ -2489,8 +2501,8 @@ The agent did not say "the injuries are consistent with strangulation." It did n
 <!-- ============ §15 CLOSING ============ -->
 <!-- ============ §17 WHAT THIS UNLOCKS ============ -->
 <section id="payoffs" class="section">
-<div class="eyebrow"><span>09 · What this unlocks</span></div>
-<h2 class="section-title">Powerful tools. <span style="color:#F08B72">Less Risk.</span></h2>
+<div class="eyebrow"><span>11 · What this unlocks</span></div>
+<h2 class="section-title">Powerful Tools. <span style="color:#F08B72">Less Risk.</span></h2>
 <p class="caption-1">These are the wins prosecutors are <em>already</em> realizing.</p>
 
 <div class="payoffs-grid">
@@ -2527,7 +2539,7 @@ The agent did not say "the injuries are consistent with strangulation." It did n
 <div class="payoff-content">
 <div class="payoff-num">Payoff 04</div>
 <div class="payoff-name">Protection: office, staff, and field.</div>
-<p class="payoff-body">Your office doesn't become the next <span class="gloss" tabindex="0">hallucination<span class="gloss-card">When the model states something false with confidence, because it predicts plausible text, not verified fact.</span></span> headline. Your staff doesn't get cut because someone confused <em>"AI efficiency"</em> with <em>"fewer prosecutors needed."</em> And the market starts to look more like what we'd actually want it to be.</p>
+<p class="payoff-body">Your office doesn't become the next <span class="gloss" tabindex="0" data-g="hallucination">hallucination</span> headline. Your staff doesn't get cut because someone confused <em>"AI efficiency"</em> with <em>"fewer prosecutors needed."</em> And the market starts to look more like what we'd actually want it to be.</p>
 </div>
 </div>
 
@@ -2537,7 +2549,7 @@ The agent did not say "the injuries are consistent with strangulation." It did n
 <!-- ============ FOR LATER · QUESTIONS TO WRESTLE WITH ============ -->
 <section id="questions" class="section deep">
 <div class="eyebrow"><span>Our conversation</span></div>
-<h2 class="section-title">Let's have the <em style="color:#A78BFA">conversation</em>.</h2>
+<h2 class="section-title">Let's Have the <em style="color:#A78BFA">Conversation</em>.</h2>
 <p class="caption-1">This is beyond politics. Where the line falls between AI that serves justice and AI that replaces it will not be settled by any one office. Small jurisdictions and large, tech-forward and slow-to-adopt, different crimes in different places: we need each other's read. A few starters below. <em>Tap to open.</em></p>
 
 <div class="phil-questions">
@@ -2563,7 +2575,7 @@ The agent did not say "the injuries are consistent with strangulation." It did n
 <div class="decision-row"><span class="d-task">Selecting which charges to file from a fact pattern</span></div>
 <div class="decision-row"><span class="d-task">Recommending plea terms based on case history</span></div>
 <div class="decision-row"><span class="d-task">Assessing a victim's credibility for charging</span></div>
-<div class="decision-row"><span class="d-task">Identifying <em>Brady</em> material in a discovery file</span></div>
+<div class="decision-row"><span class="d-task">Identifying <em><span class="gloss" tabindex="0" data-g="brady">Brady</span></em> material in a discovery file</span></div>
 <div class="decision-row"><span class="d-task">Deciding whether to seek pretrial detention</span></div>
 <div class="decision-row"><span class="d-task">Choosing whether to dismiss a case after new evidence</span></div>
 </div>
@@ -2577,12 +2589,12 @@ The agent did not say "the injuries are consistent with strangulation." It did n
 <details class="phil-q">
 <summary><div class="phil-q-head"><div class="phil-q-glance">Authenticity &amp; authorship</div><h3 class="phil-q-title">What does a person&rsquo;s signature on an AI-generated statement mean?</h3></div></summary>
 <div class="phil-q-body">
-<p class="phil-q-text">A witness gives a halting account; a tool hands back a clean, ordered statement they sign, smoother than anything they actually said. The <em>"tell the whole truth"</em> oath is implicit. What happens when the words on the page are not the words the witness chose?</p>
+<p class="phil-q-text">A witness gives a halting account; a tool hands back a clean, ordered statement they sign, smoother than anything they actually said. The <em>"tell the whole truth"</em> oath is implied. What happens when the words on the page are not the words the witness chose?</p>
 <ul class="phil-q-points">
 <li><strong>The silence problem.</strong> If AI subtly tightens <em>"I think it was him"</em> into <em>"It was him"</em>, and the witness signs without flagging the change, is that the witness's lie or the machine's? Did the witness <em>allow</em> the AI to lie? Is silence the same as authorship?</li>
 <li><strong>Two workflows, two different worlds.</strong> In one, the witness dictates, AI cleans up, and every line in the summary links back to the minute and second of the original recording. Accountability holds; every cleaned phrase can be checked against what was said. In the other, the witness reads what AI wrote, signs it, and the original dictation is gone. Same tool. Opposite world.</li>
-<li><strong>The cutting-room floor.</strong> Consider the inverse: an AI summary that <em>buries</em> an exculpatory phrase the witness offered. The witness gave it. The signed statement omits it. Whose duty is it to catch that?</li>
-<li><strong>The chain of custody parallel.</strong> We authenticate a photograph before it is evidence: chain of custody, original file, expert testimony. How is an AI-cleaned witness statement any different from an AI-enhanced photograph?</li>
+<li><strong>The cutting-room floor.</strong> Consider the inverse: an AI summary that <em>buries</em> an <span class="gloss" tabindex="0" data-g="exculpatory">exculpatory</span> phrase the witness offered. The witness gave it. The signed statement omits it. Whose duty is it to catch that?</li>
+<li><strong>The <span class="gloss" tabindex="0" data-g="chain">chain of custody</span> parallel.</strong> We authenticate a photograph before it is evidence: chain of custody, original file, expert testimony. How is an AI-cleaned witness statement any different from an AI-enhanced photograph?</li>
 <li><strong>Intent or ratification?</strong> Has the signer <em>formed</em> the words they swore to, or merely <em>ratified</em> language whose meaning lived somewhere else?</li>
 </ul>
 <div class="phil-q-ref">The framing: the <em>Jencks Act</em> (<a href="https://www.law.cornell.edu/uscode/text/18/3500" target="_blank" rel="noopener">18 U.S.C. § 3500</a>) and the best-evidence rule (<a href="https://www.law.cornell.edu/rules/fre/rule_1002" target="_blank" rel="noopener">FRE 1002</a>) on the original record; <strong><a href="https://plato.stanford.edu/entries/benjamin/" target="_blank" rel="noopener">Walter Benjamin</a></strong> on authenticity and the copy (1936); <strong><a href="https://plato.stanford.edu/entries/chinese-room/" target="_blank" rel="noopener">John Searle</a></strong>'s Chinese Room (1980) on intent versus ratification.</div>
@@ -2594,9 +2606,9 @@ The agent did not say "the injuries are consistent with strangulation." It did n
 <div class="phil-q-body">
 <p class="phil-q-text"><em>Brady</em> reaches not only what the prosecutor knows, but what others on the government's behalf know. AI now sits between the raw evidence and the prosecutor's view of it. The duty does not bend to the tool.</p>
 <ul class="phil-q-points">
-<li><strong>Did we "know"?</strong> If an AI summary of a 600-page file dropped the one paragraph that helped the defense, and no human read the original, the duty to disclose still attached. We just cannot disclose what we never saw.</li>
+<li><strong>Did we "know"?</strong> If an AI summary of a 600-page file dropped the one paragraph that helped the defense, and no human read the original, the duty to disclose still attached. We cannot disclose what we never saw.</li>
 <li><strong>Systematic blind spots.</strong> If a summarization tool is documented to drop more from non-English speakers, that gap may be exculpatory in every case it touched. One disclosure, or thousands?</li>
-<li><strong>The early-pointer problem.</strong> If AI helped identify a suspect or shaped a charging theory, that output is the earliest material decision in the chain. The defense will subpoena the prompt, the output, the confidence score, the prior version. <strong>Are we keeping any of them?</strong></li>
+<li><strong>The early-pointer problem.</strong> If AI helped identify a suspect or shaped a charging theory, that output is the earliest material decision in the chain of events. The defense will subpoena the prompt, the output, the confidence score, the prior version. <strong>Are we keeping any of them?</strong></li>
 </ul>
 <div class="phil-q-ref">The framing &mdash; <strong><a href="https://supreme.justia.com/cases/federal/us/373/83/" target="_blank" rel="noopener"><em>Brady v. Maryland</em></a></strong> (1963) on the duty to disclose exculpatory evidence; <strong><a href="https://supreme.justia.com/cases/federal/us/405/150/" target="_blank" rel="noopener"><em>Giglio v. United States</em></a></strong> (1972) extending the duty to impeachment material; <strong><a href="https://supreme.justia.com/cases/federal/us/514/419/" target="_blank" rel="noopener"><em>Kyles v. Whitley</em></a></strong> (1995) imposing on the prosecutor an affirmative duty to <em>learn</em> of evidence known to others acting on the government's behalf &mdash; including, now, the team's tools; and <strong><a href="https://supreme.justia.com/cases/federal/us/563/51/" target="_blank" rel="noopener"><em>Connick v. Thompson</em></a></strong> (2011) on the systemic-failure standard. Sixty-plus years of doctrine meeting a new layer in the chain of custody.</div>
 </div>
@@ -2620,7 +2632,7 @@ The agent did not say "the injuries are consistent with strangulation." It did n
 <div class="phil-q-body">
 <p class="phil-q-text">Triage looks like pure efficiency. But the definition of "strong" is a policy choice. If we never wrote it down, the model wrote it for us &mdash; and the cases it does <em>not</em> flag are the silent half of the policy.</p>
 <ul class="phil-q-points">
-<li><strong>Whose definition.</strong> Strong = convictable at trial? Resource-cheapest? Most prosecutable? Each of those points discretion somewhere different. The definition is a policy choice; the human writes it, or the model does.</li>
+<li><strong>Whose definition.</strong> Strong = convictable at trial? Resource-cheapest? Most prosecutable? Each of those directs discretion somewhere different. The definition is a policy choice; the human writes it, or the model does.</li>
 <li><strong>The unflagged case.</strong> A case a careful prosecutor would have prioritized but the model passed over is still a case we owe attention to. The silence of the model is doing work; we have to see it.</li>
 <li><strong>Drift over time.</strong> Once "strong" cases get the time, the "weak" ones stop getting the hard thinking that would have made them stronger. Triage compounds.</li>
 </ul>
@@ -2637,7 +2649,7 @@ The agent did not say "the injuries are consistent with strangulation." It did n
 <li><strong>Even "neutral" output anchors.</strong> A case-strength score shown <em>only for reference</em> still shapes the plea offer, the witness order, the closing argument. Decades of anchoring research show humans adjust <em>from</em> the first number they see, not toward the right answer.</li>
 <li><strong>The counterfactual test.</strong> Would the prosecutor have reached the same decision without seeing the AI output? Honest answer: we usually cannot know &mdash; and that is the problem.</li>
 <li><strong>Friction is policy.</strong> If accepting the AI suggestion is one click and rejecting it requires a memo, the system has already chosen. The same output, with the friction reversed, is a different tool.</li>
-<li><strong>The disclosure question.</strong> If AI materially influenced a charging or plea decision, what part of that role do we owe to the defense? Does the model's input belong on the <em>Brady</em> log? In <em>Giglio</em> material on a testifying analyst?</li>
+<li><strong>The disclosure question.</strong> If AI materially influenced a charging or plea decision, what part of that role do we owe to the defense? Does the model's input belong on the <em>Brady</em> log? In <em><span class="gloss" tabindex="0" data-g="giglio">Giglio</span></em> material on a testifying analyst?</li>
 <li><strong>The hidden middle.</strong> <em>"AI is only support"</em> may be the most dangerous claim we make. We tell ourselves the human decided. The audit trail shows the AI output preceded the decision. <strong>How would we know if it influenced?</strong></li>
 </ul>
 <div class="phil-q-ref">The framing &mdash; <strong><a href="https://www.science.org/doi/10.1126/science.185.4157.1124" target="_blank" rel="noopener">Tversky &amp; Kahneman</a></strong>, <em>Judgment Under Uncertainty: Heuristics and Biases</em> (<em>Science</em>, 1974) on anchoring: humans adjust <em>from</em> the first number they see; <strong><a href="https://www.aeaweb.org/articles?id=10.1257/000282803321947001" target="_blank" rel="noopener">Thaler &amp; Sunstein</a></strong>, <em>Libertarian Paternalism</em> (<em>American Economic Review</em>, 2003) on choice architecture &mdash; the default <em>is</em> the policy; and <strong><a href="https://supreme.justia.com/cases/federal/us/373/83/" target="_blank" rel="noopener"><em>Brady v. Maryland</em></a></strong> (1963) on the disclosure consequence &mdash; the earliest legitimate model in the chain is the first thing the defense will subpoena.</div>
@@ -2647,10 +2659,10 @@ The agent did not say "the injuries are consistent with strangulation." It did n
 <details class="phil-q">
 <summary><div class="phil-q-head"><div class="phil-q-glance">Outcomes vs. integrity</div><h3 class="phil-q-title">Should AI ever sentence a person, even if it was measurably more fair with better outcomes?</h3></div></summary>
 <div class="phil-q-body">
-<p class="phil-q-text">A familiar provocation: imagine an AI that sentences with measurably less racial disparity than the judges in your courthouse. Should we let the machine sentence? <strong>No.</strong> The empirical record and the structure of the role both explain why.</p>
+<p class="phil-q-text">Imagine an AI that sentences with measurably less racial disparity than the judges in your courthouse. Should we let the machine sentence? <strong>No.</strong> The empirical record and the structure of the role explain why.</p>
 <ul class="phil-q-points">
 <li><strong>What we protect is not measurable.</strong> A judge is an accountability surface: appealable, recusable, removable, looked-in-the-eye. A model is none of those. We are not protecting outcomes alone; we are protecting the chain a person can challenge.</li>
-<li><strong>"Less disparity" is contested measurement.</strong> <a href="https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing" target="_blank" rel="noopener">ProPublica's analysis</a> of COMPAS found the opposite: the tool misclassified Black defendants as high-risk at roughly twice the rate of white defendants. "Measurably better" is a claim that has to be earned, not assumed.</li>
+<li><strong>"Less disparity" is contested measurement.</strong> <a href="https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing" target="_blank" rel="noopener">ProPublica's analysis</a> of <span class="gloss" tabindex="0" data-g="compas">COMPAS</span> found the opposite: the tool misclassified Black defendants as high-risk at roughly twice the rate of white defendants. "Measurably better" is a claim that has to be earned, not assumed.</li>
 <li><strong>The natural experiment already ran.</strong> Kentucky's pretrial reform required judges to use a risk-assessment algorithm. <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3016088" target="_blank" rel="noopener">Stevenson's study</a> showed disparity did not fall: judges followed the score when it matched their priors and ignored it when it did not. The score did not constrain discretion; it provided cover.</li>
 <li><strong>Some judgments may not be handed off.</strong> Even if the numbers were right, the role itself &mdash; sentencing a person on behalf of the public &mdash; carries an integrity claim that survives the outcome calculus.</li>
 </ul>
@@ -2666,7 +2678,7 @@ The agent did not say "the injuries are consistent with strangulation." It did n
 <li><strong>Justice, not victory.</strong> Our duty (<em>Berger</em>) is to see justice done, not to prevail. Any tool we adopt has to be measurable against that standard, not against whatever the other side is using.</li>
 <li><strong>Disclosure runs one way.</strong> <em>Brady</em> and <em>Kyles</em> put an affirmative duty on us to find and disclose what helps the other side &mdash; including from the tools we use. Defense carries no parallel duty to surface their weaknesses for us. That asymmetry is the floor.</li>
 <li><strong>The accusing instrument is testable.</strong> Under <em>Crawford</em>, what we put forward must be cross-examined. A model whose reasoning we cannot show in court doesn't meet that standard. A defending tool faces no equivalent test.</li>
-<li><strong>How do we coordinate without an arms race?</strong> If we react only by matching what defense uses, we erode the asymmetric duties that make us prosecutors. The conversation has to include defense, the court, and police &mdash; not be driven by them.</li>
+<li><strong>How do we coordinate without an arms race?</strong> If we react only by matching what defense uses, we erode the asymmetric duties that define us as prosecutors. The conversation has to include defense, the court, and police &mdash; not be driven by them.</li>
 </ul>
 <div class="phil-q-ref">The framing &mdash; <strong><a href="https://supreme.justia.com/cases/federal/us/295/78/" target="_blank" rel="noopener"><em>Berger v. United States</em></a></strong> (1935): the prosecutor's interest <em>"is not that it shall win a case, but that justice shall be done"</em> &mdash; a duty no defense lawyer carries. <strong><a href="https://supreme.justia.com/cases/federal/us/373/83/" target="_blank" rel="noopener"><em>Brady v. Maryland</em></a></strong> (1963) makes the asymmetry concrete: the prosecution must hand over the exculpatory; the defense has no parallel duty. <strong><a href="https://supreme.justia.com/cases/federal/us/541/36/" target="_blank" rel="noopener"><em>Crawford v. Washington</em></a></strong> (2004) on the Confrontation Clause underscores that the accusing instrument must be testable in court. The same tool, used to accuse versus used to defend, faces different constitutional standards before it ever leaves the box.</div>
 </div>
@@ -2675,9 +2687,9 @@ The agent did not say "the injuries are consistent with strangulation." It did n
 <details class="phil-q">
 <summary><div class="phil-q-head"><div class="phil-q-glance">The pro se shift</div><h3 class="phil-q-title">What happens when "pro se" becomes synonymous with "AI-represented"?</h3></div></summary>
 <div class="phil-q-body">
-<p class="phil-q-text">A self-represented defendant with a chatbot is no longer pro se in the old sense. The motions, the citations, and the arguments now come from a model the court cannot subpoena and the defendant cannot fully explain. The doctrine assumes a human at the table.</p>
+<p class="phil-q-text">A self-represented defendant with a chatbot is no longer <span class="gloss" tabindex="0" data-g="prose">pro se</span> in the old sense. The motions, the citations, and the arguments now come from a model the court cannot subpoena and the defendant cannot fully explain. The doctrine assumes a human at the table.</p>
 <ul class="phil-q-points">
-<li><strong>The hallucination floor.</strong> The same fabricated-citation problem that sanctions firms with $30,000 penalties will land in our courts unfiltered, signed by a defendant who cannot afford counsel and trusted the tool. Who carries the consequence?</li>
+<li><strong>The <span class="gloss" tabindex="0" data-g="hallucination">hallucination</span> floor.</strong> The same fabricated-citation problem that sanctions firms with $30,000 penalties will land in our courts unfiltered, signed by a defendant who cannot afford counsel and trusted the tool. Who carries the consequence?</li>
 <li><strong>The leniency convention.</strong> Courts read pro se filings liberally because the filer lacks training. Does that liberality still apply when the filing was drafted by GPT-5? Where does the indulgence end and the standard begin?</li>
 <li><strong>Our response.</strong> Do we move to strike on hallucinated authority? Do we flag it for the court? Do we treat AI-assisted pro se filings as represented filings for sanctions purposes? <em>Berger</em> says our duty is justice, not victory. What does that mean when the other side is a model?</li>
 <li><strong>The access argument.</strong> For defendants priced out of counsel, a chatbot may be the only door to the courthouse. Refusing to engage with AI-assisted pleadings may shut that door. Engaging with them on equal footing may erode the standard. There is no easy answer here.</li>
@@ -2694,24 +2706,24 @@ The agent did not say "the injuries are consistent with strangulation." It did n
 <!-- ============ APPENDIX III · QUESTIONS FOR YOUR VENDORS ============ -->
 <section id="appendix3" class="section black">
 <div class="eyebrow"><span>Their conversation · A handout</span></div>
-<h2 class="section-title">Questions for your <em>vendors</em>.</h2>
-<p class="appendix-intro">Understand how each AI feature could impact your office. Encourage your vendors to talk with other vendors. <em>This is not only an opportunity for prosecutors to wrestle with these questions; vendors should be having the same conversation.</em></p>
+<h2 class="section-title">Questions for Your <em>Vendors</em>.</h2>
+<p class="appendix-intro">Understand how each AI feature could impact your office. Encourage vendors to talk with each other. <em>Vendors should be having the same conversation; it is not only for prosecutors.</em></p>
 
 <ol class="vq-list">
 <li><span class="vq-tag">The problem &amp; the worst case</span>What problem are you trying to solve? What are the risks of using AI to solve it? Have you thought through the worst case, and how are you preventing it?</li>
 <li><span class="vq-tag">Lessons learned</span>What lessons have you learned so far with your AI functionality?</li>
 <li><span class="vq-tag">Our data</span>Are you training or tuning your models on our data in any way?</li>
-<li><span class="vq-tag">Evaluation &amp; drift</span>Do you have an evaluation set for the AI? How do you track its performance over time and detect when it begins to drift &mdash; and do I get access to that evaluation set?</li>
+<li><span class="vq-tag">Evaluation &amp; drift</span>Do you have an <span class="gloss" tabindex="0" data-g="eval">evaluation set</span> for the AI? How do you track its performance over time and detect when it begins to drift &mdash; and do I get access to that evaluation set?</li>
 <li><span class="vq-tag">Prompt transparency</span>For any GenAI in your product, will you show me the exact prompts and system instructions, and tell me when they change?</li>
-<li><span class="vq-tag">Source traceability</span>When your AI tells us something, can we see the primary source behind it? If I highlight a description the AI wrote, can I open the exact document it was pulled from?</li>
+<li><span class="vq-tag">Source <span class="gloss" tabindex="0" data-g="trace">traceability</span></span>When your AI tells us something, can we see the primary source behind it? If I highlight a description the AI wrote, can I open the exact document it was pulled from?</li>
 <li><span class="vq-tag">Authorship audit</span>For any GenAI in your product, do you record which words the AI generated and which a human edited, with timestamps and full version history?</li>
-<li><span class="vq-tag">Stress testing</span>Can your safeguards be talked around by rephrasing a request? What kind of stress testing have you done to make sure they're decent?</li>
+<li><span class="vq-tag">Stress testing</span>Can your safeguards be talked around by rephrasing a request? What kind of stress testing have you done to confirm they hold?</li>
 <li><span class="vq-tag">Defaults under stress</span>Are the safe choices the default, or do my staff have to remember to pick them on a bad day?</li>
 <li><span class="vq-tag">Model provider</span>Who provides your AI model, on what host, and through what interface?</li>
 <li><span class="vq-tag">Hosting</span>Where is your model hosted, and on whose infrastructure?</li>
-<li><span class="vq-tag">CJIS data</span>Is CJIS data ever sent to the AI? If so, where does it go, and who can see it?</li>
+<li><span class="vq-tag"><span class="gloss" tabindex="0" data-g="cjis">CJIS</span> data</span>Is CJIS data ever sent to the AI? If so, where does it go, and who can see it?</li>
 <li><span class="vq-tag">AI embedding map</span>Can you document every point where AI is embedded in your product, and exactly what data is sent to it and returned?</li>
-<li><span class="vq-tag">Improvement mechanism</span>For each AI feature, what mechanism improves it: in-context learning, prompt engineering, fine-tuning, or training?</li>
+<li><span class="vq-tag">Improvement mechanism</span>For each AI feature, what mechanism improves it: in-context learning, <span class="gloss" tabindex="0" data-g="prompteng">prompt engineering</span>, fine-tuning, or training?</li>
 <li><span class="vq-tag">Dev-side AI &amp; security</span>How do your own developers use AI to build this product, and what process ensures it has not introduced security vulnerabilities?</li>
 </ol>
 </section>
@@ -2719,7 +2731,7 @@ The agent did not say "the injuries are consistent with strangulation." It did n
 <!-- ============ §18 APPENDIX: MORE CASES WORTH KNOWING ============ -->
 <section id="appendix" class="section black">
 <div class="eyebrow"><span>Case Law · For your reading list</span></div>
-<h2 class="section-title">More cases worth knowing.</h2>
+<h2 class="section-title">More Cases Worth Knowing.</h2>
 <p class="appendix-intro">What's at stake: the <strong>public trust</strong> that empowers our offices, the <strong>sanctity of human decisions</strong>, and the <strong>institution itself</strong>.</p>
 <p class="appendix-intro">American public prosecution has stood for nearly four hundred years.<sup class="appx-fn">†</sup> If we believe this work cannot be done by a machine, then we are the ones who have to defend it.</p>
 <p class="appendix-intro" style="font-size:13.5px;opacity:0.85">None of the cases below are prosecution matters. <em>The mechanics are identical.</em> From algorithmic risk-assessment that bypassed human judgment to AI-fabricated citations that bypassed verification, each was a competent lawyer or agency that did not think it would happen to them. Tap to expand.</p>
@@ -2734,7 +2746,7 @@ The agent did not say "the injuries are consistent with strangulation." It did n
 </span>
 </summary>
 <div class="case-body">
-<p class="case-what">Eric Loomis was sentenced to six years partly on the basis of a <strong>COMPAS</strong> algorithmic risk-assessment score predicting his likelihood of reoffending. He challenged on due process grounds: the algorithm was a trade secret, he could not audit it, and the math was inaccessible to court, counsel, and defendant alike. The Wisconsin Supreme Court upheld the sentence, but required that defendants be informed of the tool's limitations. Two months earlier, a ProPublica investigation analyzing 7,000 COMPAS scores found the algorithm <strong>systematically misclassified Black defendants as high-risk at roughly twice the rate of white defendants</strong>, while white defendants were more often falsely labeled low-risk.</p>
+<p class="case-what">Eric Loomis was sentenced to six years partly on the basis of a <strong><span class="gloss" tabindex="0" data-g="compas">COMPAS</span></strong> algorithmic risk-assessment score predicting his likelihood of reoffending. He challenged on due process grounds: the algorithm was a trade secret, he could not audit it, and the math was inaccessible to court, counsel, and defendant alike. The Wisconsin Supreme Court upheld the sentence, but required that defendants be informed of the tool's limitations. Two months earlier, a ProPublica investigation analyzing 7,000 COMPAS scores found the algorithm <strong>systematically misclassified Black defendants as high-risk at roughly twice the rate of white defendants</strong>, while white defendants were more often falsely labeled low-risk.</p>
 <p class="case-why">This is the original sin of AI in our field. A risk-assessment tool that prosecutors recommended and judges adopted turned out to be opaque, proprietary, and demonstrably biased, and the institution had no way to verify it before relying on it. Every "AI for prosecutors" pitch since has had to argue around <em>Loomis</em>. When we hear "the algorithm decided," remember: a human did, and signed off without being able to see the work.</p>
 <p class="case-source">Source: <a href="https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing" target="_blank" rel="noopener">ProPublica, "Machine Bias" (May 2016)</a></p>
 </div>
@@ -2762,7 +2774,7 @@ The agent did not say "the injuries are consistent with strangulation." It did n
 </span>
 </summary>
 <div class="case-body">
-<p class="case-what">Attorney Jae S. Lee filed a Second Circuit reply brief in a medical-malpractice appeal citing <em>Bourguignon v. Coordinated Behavioral Health Services</em>, a case that did not exist. She told the court she had "encountered difficulties" with traditional research tools and asked ChatGPT for help. She did not read or otherwise confirm the suggested case. The court referred her to its Grievance Panel. <strong>Two months later</strong>, in her own pro se employment-discrimination action against Delta Airlines, she filed a brief identified by the district court as containing additional hallucinated authority.</p>
+<p class="case-what">Attorney Jae S. Lee filed a Second Circuit reply brief in a medical-malpractice appeal citing <em>Bourguignon v. Coordinated Behavioral Health Services</em>, a case that did not exist. She told the court she had "encountered difficulties" with traditional research tools and asked ChatGPT for help. She did not read or otherwise confirm the suggested case. The court referred her to its Grievance Panel. <strong>Two months later</strong>, in her own <span class="gloss" tabindex="0" data-g="prose">pro se</span> employment-discrimination action against Delta Airlines, she filed a brief identified by the district court as containing additional hallucinated authority.</p>
 <p class="case-why">The first sanction is a warning. The second is the pattern. Individual goodwill and "I'll be more careful" are not a substitute for an enforced office policy with no exceptions. Behavior under stress reverts to what is easy.</p>
 <p class="case-source">Source: <a href="https://news.bloomberglaw.com/business-and-practice/ny-lawyer-faces-possible-sanctions-for-citing-phony-chatgpt-case" target="_blank" rel="noopener">Bloomberg Law (Jan 2024)</a></p>
 </div>
@@ -2771,7 +2783,7 @@ The agent did not say "the injuries are consistent with strangulation." It did n
 <details class="case-detail">
 <summary>
 <span class="case-meta">
-<span class="case-when">Feb 2025 · D. Wyoming · It is not just ChatGPT</span>
+<span class="case-when">Feb 2025 · D. Wyoming · Not only ChatGPT</span>
 <span class="case-title-line"><em>Wadsworth v. Walmart</em>: $5,000 in combined sanctions for hallucinations from the firm's <strong>in-house</strong> AI tool.</span>
 </span>
 </summary>
@@ -2804,7 +2816,7 @@ The agent did not say "the injuries are consistent with strangulation." It did n
 </span>
 </summary>
 <div class="case-body">
-<p class="case-what">A California employment-law attorney filed a brief in the Court of Appeal containing AI-hallucinated authorities. The court issued <strong>California's first published opinion sanctioning AI hallucinations in court filings</strong>, fined the attorney $10,000, and made the holding binding precedent across the state.</p>
+<p class="case-what">A California employment-law attorney filed a brief in the Court of Appeal containing AI-<span class="gloss" tabindex="0" data-g="hallucination">hallucinated</span> authorities. The court issued <strong>California's first published opinion sanctioning AI hallucinations in court filings</strong>, fined the attorney $10,000, and made the holding binding precedent across the state.</p>
 <p class="case-why">This is the controlling published authority in California, the same state where the Nevada County District Attorney's office now faces Supreme Court review. The civil standard is set; the criminal standard is being built on top of it.</p>
 <p class="case-source">Source: <a href="https://www.scientificamerican.com/article/why-lawyers-keep-citing-fake-cases-invented-by-ai/" target="_blank" rel="noopener">Scientific American, May 2026 (covering California sanctions trend)</a></p>
 </div>
@@ -2833,7 +2845,7 @@ The agent did not say "the injuries are consistent with strangulation." It did n
 <!-- ============ DRIFT · AI ON AI ============ -->
 <section id="drift" class="section black">
 <div class="eyebrow"><span>The compounding loop &middot; Problem</span></div>
-<h2 class="section-title"><span style="color:#F08B72">Model collapse</span>.</h2>
+<h2 class="section-title"><span style="color:#F08B72">Model Collapse</span>.</h2>
 <p class="prog-intro">More of what arrives in the office is already AI-written: police reports, vendor summaries, prior filings. Our own AI tools then summarize that output, and the next tool summarizes the summary. Each pass is a chance to drift, and the errors do not cancel out. They compound.</p>
 
 <div class="drift-loop">
@@ -2924,7 +2936,7 @@ The agent did not say "the injuries are consistent with strangulation." It did n
 <li>Evidence organization</li>
 <li>Trial preparation</li>
 <li>Motion drafting</li>
-<li>Identifying Brady material</li>
+<li>Identifying <span class="gloss" tabindex="0" data-g="brady">Brady</span> material</li>
 <li>Flagging inconsistent witness statements</li>
 </ul>
 </div>
@@ -2949,7 +2961,7 @@ The agent did not say "the injuries are consistent with strangulation." It did n
 <div class="rp-block">
 <div class="rp-block-head">Ethical Concerns</div>
 <ul class="rp-ethics-list">
-<li>Charging decisions must remain human decisions</li>
+<li>Charging decisions must remain human decisions<span class="gloss oq" tabindex="0" aria-label="Open question">?<span class="gloss-card"><span class="tt">Open question</span>If a model suggests the charge and a human signs it, at what point is the charging decision delegated to the model?</span></span></li>
 <li>Brady obligations cannot be delegated</li>
 <li>AI may identify issues but should not make final decisions</li>
 </ul>
@@ -2997,7 +3009,7 @@ The agent did not say "the injuries are consistent with strangulation." It did n
 <div class="rp-block-head">Ethical Concerns</div>
 <ul class="rp-ethics-list">
 <li>Confidential client information in public AI systems</li>
-<li>Filing hallucinated cases or citations</li>
+<li>Filing <span class="gloss" tabindex="0" data-g="hallucination">hallucinated</span> cases or citations</li>
 <li>Overreliance on AI legal analysis</li>
 </ul>
 </div>
@@ -3008,7 +3020,7 @@ The agent did not say "the injuries are consistent with strangulation." It did n
 <!-- PRO SE DEFENDANTS -->
 <div class="role-panel rp-prose">
 <h3 class="rp-role-title">Pro Se</h3>
-<div class="role-lead">A pro se defendant represents themselves without an attorney.</div>
+<div class="role-lead">A <span class="gloss" tabindex="0" data-g="prose">pro se</span> defendant represents themselves without an attorney.</div>
 <div class="rp-grid">
 <div class="rp-col">
 <div class="rp-block">
@@ -3194,7 +3206,7 @@ The agent did not say "the injuries are consistent with strangulation." It did n
 <li>Forensic assistance</li>
 </ul>
 </div>
-<div class="rp-why-box">Expert testimony built on a black box system cannot be cross-examined on methodology — the foundational requirement of admissibility.</div>
+<div class="rp-why-box">Expert testimony built on a <span class="gloss" tabindex="0" data-g="blackbox">black box</span> system cannot be cross-examined on methodology — the foundational requirement of admissibility.</div>
 </div>
 <div class="rp-col">
 <div class="rp-scenario">
@@ -3217,7 +3229,7 @@ The agent did not say "the injuries are consistent with strangulation." It did n
 <div class="rp-block-head">Ethical Concerns</div>
 <ul class="rp-ethics-list">
 <li>Unknown error rates in automated systems</li>
-<li>Black box methodology — cannot be cross-examined</li>
+<li>Black box methodology — cannot be cross-examined<span class="gloss oq" tabindex="0" aria-label="Open question">?<span class="gloss-card"><span class="tt">Open question</span>If an expert relies on an AI tool whose method cannot be explained, can the opinion meet the admissibility standard for reliable methodology?</span></span></li>
 <li>Overreliance on automated conclusions</li>
 </ul>
 </div>
@@ -3262,7 +3274,7 @@ The agent did not say "the injuries are consistent with strangulation." It did n
 <ul class="rp-ethics-list">
 <li>Hidden influences on judicial decisions</li>
 <li>Accountability and transparency</li>
-<li>Reliance on black box recommendations</li>
+<li>Reliance on black box recommendations<span class="gloss oq" tabindex="0" aria-label="Open question">?<span class="gloss-card"><span class="tt">Open question</span>If a judge adopts an algorithmic detention recommendation whose reasoning cannot be inspected, how can either party contest it on the record?</span></span></li>
 </ul>
 </div>
 </div>
@@ -3278,7 +3290,7 @@ The agent did not say "the injuries are consistent with strangulation." It did n
 <div class="rp-block">
 <div class="rp-block-head">Improper AI Uses</div>
 <ul class="rp-ethics-list">
-<li>Summarizing testimony during deliberations</li>
+<li>Summarizing testimony during <span class="gloss" tabindex="0" data-g="deliberations">deliberations</span></li>
 <li>Researching legal issues outside court</li>
 <li>Asking AI whether the evidence is sufficient to convict</li>
 </ul>
@@ -3362,13 +3374,13 @@ The agent did not say "the injuries are consistent with strangulation." It did n
 <!-- ============ CASCADING RISK ============ -->
 <section id="cascade" class="section black">
 <div class="eyebrow"><span>Putting it together</span></div>
-<h2 class="section-title">Every upstream error <em>becomes your problem</em>.</h2>
+<h2 class="section-title">Every Upstream Error <em>Becomes Your Problem</em>.</h2>
 <p class="prog-intro">The prosecutor signs the filing and answers for it in court. Every AI error introduced upstream — in police reports, witness statements, expert analysis, the defense discovery flood — arrives at your desk looking authoritative.</p>
 
 <div class="cascade-diagram">
 <div class="cascade-card cc-l1"><div class="cc-role">Police</div><div class="cc-risk">AI-altered reports · missing audit trails</div></div>
 <div class="cascade-card cc-l2"><div class="cc-role">Witnesses</div><div class="cc-risk">AI-coached statements · fabricated evidence</div></div>
-<div class="cascade-card cc-l3"><div class="cc-role">Experts</div><div class="cc-risk">Black box analysis · unknown error rates</div></div>
+<div class="cascade-card cc-l3"><div class="cc-role">Experts</div><div class="cc-risk"><span class="gloss" tabindex="0" data-g="blackbox">Black box</span> analysis · unknown error rates</div></div>
 <div class="cc-arr cc-al1">&rarr;</div>
 <div class="cc-arr cc-al2">&rarr;</div>
 <div class="cc-arr cc-al3">&rarr;</div>
@@ -3394,7 +3406,7 @@ The agent did not say "the injuries are consistent with strangulation." It did n
 <div class="cascade-card cc-r3"><div class="cc-role">Judges</div><div class="cc-risk">AI-summarized motions · hidden influences</div></div>
 </div>
 
-<p class="cascade-close">The prosecutor's job in an AI era is not merely to review conclusions. It is to <strong>preserve a path back to the original source of every important fact</strong>.</p>
+<p class="cascade-close">The prosecutor's job in an AI era is to <strong>preserve a path back to the original source of every important fact</strong>, not only to review conclusions.</p>
 </section>
 
 <!-- ============ TRACEABILITY ============ -->
@@ -3413,7 +3425,7 @@ The agent did not say "the injuries are consistent with strangulation." It did n
 <span class="tn-head">No sentence stands on its own word.</span>
 The summary is convenient, but the summary is not the evidence. Every claim above links to the exact line in the exact document it came from. That is the difference between a tool you can file behind and one you cannot.
 <ul>
-<li><strong>Sentence-level, not document-level.</strong> "It's in the file somewhere" is not traceability. The link lands on the line.</li>
+<li><strong>Sentence-level, not document-level.</strong> "It's in the file somewhere" is not <span class="gloss" tabindex="0" data-g="trace">traceability</span>. The link lands on the line.</li>
 <li><strong>Verify before you rely.</strong> One hover confirms the claim or exposes the drift &mdash; like "in the vehicle" vs. "near the vehicle."</li>
 <li><strong>It survives the chain.</strong> Even after layers of summary, the trail back to the human-authored original stays intact.</li>
 <li><strong>Ask your vendor for it by name.</strong> See the vendor questions: "If I highlight a description the AI wrote, can I open the exact document it was pulled from?"</li>
@@ -3425,8 +3437,8 @@ The summary is convenient, but the summary is not the evidence. Every claim abov
 <!-- ============ RATE A FEATURE · METHODOLOGY ============ -->
 <section id="rate-methodology" class="section rate-section">
 <div class="eyebrow"><span>Rate a Feature · Methodology</span></div>
-<h2 class="section-title">How to rate an AI feature</h2>
-<p class="rate-sub">The question isn't "AI vs. no AI." It's <em>how the tool is built</em>.</p>
+<h2 class="section-title">How to Rate an AI Feature</h2>
+<p class="rate-sub">The question is <em>how the tool is built</em>, not whether it uses AI.</p>
 
 <div class="method-grid">
 <div class="method-block">
@@ -3456,7 +3468,7 @@ The summary is convenient, but the summary is not the evidence. Every claim abov
 <!-- ============ RATE A FEATURE · DIVERSION AUTO-FLAG ============ -->
 <section id="rate-divert" class="section rate-section">
 <div class="eyebrow"><span>Rate a Feature · Diversion auto-flag</span></div>
-<h2 class="section-title">Diversion auto-flag</h2>
+<h2 class="section-title">Diversion Auto-Flag</h2>
 <p class="rate-task"><strong>Task</strong><span class="rate-task-text">Decide which incoming cases the diversion coordinator should review for eligibility.</span></p>
 
 <div class="rate-tabs">
@@ -3552,7 +3564,7 @@ The summary is convenient, but the summary is not the evidence. Every claim abov
 <!-- ============ RATE A FEATURE · DOCUMENT EXTRACT ============ -->
 <section id="rate-extract" class="section rate-section">
 <div class="eyebrow"><span>Rate a Feature · Document extract</span></div>
-<h2 class="section-title">Document extract</h2>
+<h2 class="section-title">Document Extract</h2>
 <p class="rate-task"><strong>Task</strong><span class="rate-task-text">Read a case document and fill in the structured fields on the office's case form.</span></p>
 
 <div class="rate-tabs">
@@ -3589,7 +3601,7 @@ The summary is convenient, but the summary is not the evidence. Every claim abov
 <div class="rate-what"><h4>What this build does</h4><p>AI extracts every field and writes them to the database with no human review.</p></div>
 <div class="rate-proscons">
 <div class="rate-pros"><h4>Pros</h4><ul><li>Zero paralegal time.</li><li>Values immediately available downstream.</li></ul></div>
-<div class="rate-cons"><h4>Cons</h4><ul><li>Errors enter the record silently.</li><li>First noticed at a hearing or Brady review.</li><li>Office operates on the wrong fact for weeks.</li></ul></div>
+<div class="rate-cons"><h4>Cons</h4><ul><li>Errors enter the record silently.</li><li>First noticed at a hearing or <span class="gloss" tabindex="0" data-g="brady">Brady</span> review.</li><li>Office operates on the wrong fact for weeks.</li></ul></div>
 </div>
 <div class="rate-why"><span class="rate-why-head">Why Don't:</span><p>No human in the loop on data that becomes the office's record.</p></div>
 </div>
@@ -3628,7 +3640,7 @@ The summary is convenient, but the summary is not the evidence. Every claim abov
 <!-- ============ RATE A FEATURE · CASE SUMMARY ============ -->
 <section id="rate-summary" class="section rate-section">
 <div class="eyebrow"><span>Rate a Feature · Case summary</span></div>
-<h2 class="section-title">Case summary</h2>
+<h2 class="section-title">Case Summary</h2>
 <p class="rate-task"><strong>Task</strong><span class="rate-task-text">Write a one-paragraph summary of a case the prosecutor can read before walking into court.</span></p>
 
 <div class="rate-tabs">
@@ -3665,7 +3677,7 @@ The summary is convenient, but the summary is not the evidence. Every claim abov
 <div class="rate-what"><h4>What this build does</h4><p>AI writes a paragraph summary from the case file. No links to sources.</p></div>
 <div class="rate-proscons">
 <div class="rate-pros"><h4>Pros</h4><ul><li>Fast to read.</li><li>Gives a quick mental model.</li></ul></div>
-<div class="rate-cons"><h4>Cons</h4><ul><li>Hallucinated detail is invisible.</li><li>"Glove box" vs. "under driver seat" looks the same on the page.</li><li>Prosecutor walks into court with a confidently-wrong memory.</li></ul></div>
+<div class="rate-cons"><h4>Cons</h4><ul><li><span class="gloss" tabindex="0" data-g="hallucination">Hallucinated</span> detail is invisible.</li><li>"Glove box" vs. "under driver seat" looks the same on the page.</li><li>Prosecutor walks into court with a confidently-wrong memory.</li></ul></div>
 </div>
 <div class="rate-why"><span class="rate-why-head">Why Don't:</span><p>Nothing to check against. The summary becomes the truth.</p></div>
 </div>
@@ -3704,7 +3716,7 @@ The summary is convenient, but the summary is not the evidence. Every claim abov
 <!-- ============ RATE A FEATURE · SENTENCING MEMO ============ -->
 <section id="rate-memo" class="section rate-section">
 <div class="eyebrow"><span>Rate a Feature · Sentencing memo</span></div>
-<h2 class="section-title">Sentencing memo</h2>
+<h2 class="section-title">Sentencing Memo</h2>
 <p class="rate-task"><strong>Task</strong><span class="rate-task-text">Draft the sentencing memorandum the prosecutor signs and files with the court.</span></p>
 
 <div class="rate-tabs">
@@ -3780,7 +3792,7 @@ The summary is convenient, but the summary is not the evidence. Every claim abov
 <!-- ============ RATE A FEATURE · CHARGING CHATBOT ============ -->
 <section id="rate-chatbot" class="section rate-section">
 <div class="eyebrow"><span>Rate a Feature · Charging chatbot</span></div>
-<h2 class="section-title">Charging chatbot</h2>
+<h2 class="section-title">Charging Chatbot</h2>
 <p class="rate-task"><strong>Task</strong><span class="rate-task-text">Answer the prosecutor's questions about what charge to file or whether to take a case to trial.</span></p>
 
 <div class="rate-tabs">
@@ -3830,7 +3842,7 @@ The summary is convenient, but the summary is not the evidence. Every claim abov
 </div>
 <div class="rate-what"><h4>What this build does</h4><p>The bot "only suggests" a charge; the prosecutor reviews and approves.</p></div>
 <div class="rate-proscons">
-<div class="rate-pros"><h4>Pros</h4><ul><li>Human-in-the-loop on paper.</li><li>Signoff process exists.</li></ul></div>
+<div class="rate-pros"><h4>Pros</h4><ul><li><span class="gloss" tabindex="0" data-g="hitl">Human-in-the-loop</span> on paper.</li><li>Signoff process exists.</li></ul></div>
 <div class="rate-cons"><h4>Cons</h4><ul><li>The suggestion is the anchor.</li><li>Prosecutor adjusts <em>from</em> it instead of deciding fresh.</li><li>"Sign-off" is not "decision."</li></ul></div>
 </div>
 <div class="rate-why"><span class="rate-why-head">Why Don't:</span><p>Anchoring effect ensures the model's call drives the outcome regardless of the signoff step.</p></div>
@@ -3856,7 +3868,7 @@ The summary is convenient, but the summary is not the evidence. Every claim abov
 <!-- ============ RATE A FEATURE · STATUS EMAILS ============ -->
 <section id="rate-email" class="section rate-section">
 <div class="eyebrow"><span>Rate a Feature · Status emails</span></div>
-<h2 class="section-title">Status emails</h2>
+<h2 class="section-title">Status Emails</h2>
 <p class="rate-task"><strong>Task</strong><span class="rate-task-text">Send routine status emails — court dates, continuances, plea offer updates — to defense counsel.</span></p>
 
 <div class="rate-tabs">
@@ -3889,7 +3901,7 @@ The summary is convenient, but the summary is not the evidence. Every claim abov
 <div class="rate-pros"><h4>Pros</h4><ul><li>Deterministic; no model drift.</li><li>Zero LLM cost.</li><li>Complete audit trail.</li><li>Works offline.</li></ul></div>
 <div class="rate-cons"><h4>Cons</h4><ul><li>Cannot adapt to a genuinely novel situation — use the next variant for those.</li></ul></div>
 </div>
-<div class="rate-why"><span class="rate-why-head">Why Trick:</span><p>The right answer is the simpler tool. AI isn't needed; vendors pitching it are selling AI, not solving the task.</p></div>
+<div class="rate-why"><span class="rate-why-head">Why Trick:</span><p>The right answer is the simpler tool. AI isn't needed; vendors pitching it are selling AI instead of solving the task.</p></div>
 </div>
 <div class="rate-panel rp-email-v1 verdict-adopt">
 <div class="rate-panel-id">
@@ -3900,7 +3912,7 @@ The summary is convenient, but the summary is not the evidence. Every claim abov
 </div>
 <div class="rate-what"><h4>What this build does</h4><p>For a one-off email where no template fits, use a government-approved drafting assistant walled off from the case record. User provides context; model drafts; a human reviews and sends.</p></div>
 <div class="rate-proscons">
-<div class="rate-pros"><h4>Pros</h4><ul><li>Handles edge cases templates miss.</li><li>CJIS / case-record data never enters the prompt.</li><li>Human still authors the send.</li></ul></div>
+<div class="rate-pros"><h4>Pros</h4><ul><li>Handles edge cases templates miss.</li><li><span class="gloss" tabindex="0" data-g="cjis">CJIS</span> / case-record data never enters the prompt.</li><li>Human still authors the send.</li></ul></div>
 <div class="rate-cons"><h4>Cons</h4><ul><li>User may paste case facts into the prompt to "give context" — mitigated by training and the technical wall.</li></ul></div>
 </div>
 <div class="rate-why"><span class="rate-why-head">Why Adopt:</span><p>Scope-limited use; case record stays out of the prompt; human authors the send.</p></div>
@@ -3911,31 +3923,40 @@ The summary is convenient, but the summary is not the evidence. Every claim abov
 <!-- ============ APPENDIX VI · GLOSSARY ============ -->
 <section id="appendix6" class="section black">
 <div class="eyebrow"><span>Appendix VI · Plain language</span></div>
-<h2 class="section-title">The <em>glossary</em>.</h2>
+<h2 class="section-title">The <em>Glossary</em>.</h2>
 <p class="appendix-intro">Every term we use, in one plain sentence. Wherever a word is <span class="gloss" tabindex="0">underlined like this<span class="gloss-card">A quick definition appears when you hover over it or tab to it &mdash; the same cards listed below.</span></span> elsewhere in the deck, hover or tab to it for the same card.</p>
 
 <ul class="gl-list">
-<li><span class="gl-term">Model</span>The trained "brain" that does the thinking; on its own it only predicts text.</li>
-<li><span class="gl-term">GenAI</span>AI that writes new text in its own voice (drafts, summaries); the speed comes from skipping the source.</li>
-<li><span class="gl-term">Chatbot</span>A model wearing a face: a conversational interface that answers in natural language, agreeable and easy to talk around.</li>
-<li><span class="gl-term">Agent</span>A model that can take actions (find, extract, send, file) through tools, not just talk.</li>
-<li><span class="gl-term">Interface</span>How the AI talks to you (a chat box, a review panel); the face, not the brain.</li>
-<li><span class="gl-term">Host / environment</span>The controlled place the model runs (e.g., AWS Bedrock, AgentCore); the shell, with its own data rules.</li>
-<li><span class="gl-term">Model vs. host vs. interface</span>The brain, the body it runs in, and the face you see; the same brain is far safer in a controlled host than in a public app.</li>
-<li><span class="gl-term">Prompt</span>What you ask; the exact words steer the answer.</li>
-<li><span class="gl-term">Prompt engineering</span>Choosing the wording and structure of the ask to get a better, more reliable answer.</li>
-<li><span class="gl-term">In-context learning</span>Giving the model examples or notes inside the prompt so it adapts on the spot, without retraining.</li>
-<li><span class="gl-term">Fine-tuning</span>A short, targeted retraining on your examples so the model does one job better.</li>
-<li><span class="gl-term">Training</span>The months-long, expensive process that builds the base brain from huge amounts of data.</li>
-<li><span class="gl-term">System prompt</span>The hidden core instructions that set the model's baseline behavior and rules.</li>
-<li><span class="gl-term">Persona / role</span>The job you assign on top of the system prompt (e.g., "paralegal assistant").</li>
-<li><span class="gl-term">Tool / permission</span>A specific capability the AI is licensed to use (send email, edit a file); each is a risk to weigh.</li>
-<li><span class="gl-term">Evaluation (eval)</span>The model's graduation exam: a fixed test set that measures what it can and cannot do before you trust it.</li>
-<li><span class="gl-term">Hallucination</span>When the model states something false with confidence, because it predicts plausible text, not verified fact.</li>
-<li><span class="gl-term">Traceability</span>Being able to follow any AI output back to the source document it came from.</li>
-<li><span class="gl-term">Human-in-the-loop</span>A person reviews and decides; the AI presents, the human signs.</li>
-<li><span class="gl-term">CJIS</span>Criminal Justice Information Services data, subject to strict federal security rules; off-limits to tools that aren't covered.</li>
-<li><span class="gl-term">Deskilling</span>The slow erosion of a professional's own judgment after leaning on AI for too long.</li>
+<li id="g-model" data-gl="model"><span class="gl-term">Model</span>The trained "brain" that does the thinking; on its own it only predicts text.</li>
+<li id="g-genai" data-gl="genai"><span class="gl-term">GenAI</span>AI that writes new text in its own voice (drafts, summaries); the speed comes from skipping the source.</li>
+<li id="g-chatbot" data-gl="chatbot"><span class="gl-term">Chatbot</span>A model wearing a face: a conversational interface that answers in natural language, agreeable and easy to talk around.</li>
+<li id="g-agent" data-gl="agent"><span class="gl-term">Agent</span>A model that can take actions (find, extract, send, file) through tools, not just talk.</li>
+<li id="g-interface" data-gl="interface"><span class="gl-term">Interface</span>How the AI talks to you (a chat box, a review panel); the face, not the brain.</li>
+<li id="g-host" data-gl="host"><span class="gl-term">Host / environment</span>The controlled place the model runs (e.g., AWS Bedrock, AgentCore); the shell, with its own data rules.</li>
+<li id="g-modelvshost" data-gl="modelvshost"><span class="gl-term">Model vs. host vs. interface</span>The brain, the body it runs in, and the face you see; the same brain is far safer in a controlled host than in a public app.</li>
+<li id="g-prompt" data-gl="prompt"><span class="gl-term">Prompt</span>What you ask; the exact words steer the answer.</li>
+<li id="g-prompteng" data-gl="prompteng"><span class="gl-term">Prompt engineering</span>Choosing the wording and structure of the ask to get a better, more reliable answer.</li>
+<li id="g-icl" data-gl="icl"><span class="gl-term">In-context learning</span>Giving the model examples or notes inside the prompt so it adapts on the spot, without retraining.</li>
+<li id="g-finetune" data-gl="finetune"><span class="gl-term">Fine-tuning</span>A short, targeted retraining on your examples so the model does one job better.</li>
+<li id="g-training" data-gl="training"><span class="gl-term">Training</span>The months-long, expensive process that builds the base brain from huge amounts of data.</li>
+<li id="g-sysprompt" data-gl="sysprompt"><span class="gl-term">System prompt</span>The hidden core instructions that set the model's baseline behavior and rules.</li>
+<li id="g-persona" data-gl="persona"><span class="gl-term">Persona / role</span>The job you assign on top of the system prompt (e.g., "paralegal assistant").</li>
+<li id="g-tool" data-gl="tool"><span class="gl-term">Tool / permission</span>A specific capability the AI is licensed to use (send email, edit a file); each is a risk to weigh.</li>
+<li id="g-eval" data-gl="eval"><span class="gl-term">Evaluation (eval)</span>The model's graduation exam: a fixed test set that measures what it can and cannot do before you trust it.</li>
+<li id="g-hallucination" data-gl="hallucination"><span class="gl-term">Hallucination</span>When the model states something false with confidence, because it predicts plausible text, not verified fact.</li>
+<li id="g-trace" data-gl="trace"><span class="gl-term">Traceability</span>Being able to follow any AI output back to the source document it came from.</li>
+<li id="g-hitl" data-gl="hitl"><span class="gl-term">Human-in-the-loop</span>A person reviews and decides; the AI presents, the human signs.</li>
+<li id="g-cjis" data-gl="cjis"><span class="gl-term">CJIS</span>Criminal Justice Information Services data, subject to strict federal security rules; off-limits to tools that aren't covered.</li>
+<li id="g-collapse" data-gl="collapse"><span class="gl-term">Model collapse</span>The compounding distortion when AI summarizes AI: each lossy pass drops the rare and uncertain, and errors accumulate.</li>
+<li id="g-brady" data-gl="brady"><span class="gl-term">Brady material</span>Evidence favorable to the accused that the prosecution must disclose to the defense, under Brady v. Maryland (1963); the duty covers what others acting for the government know.</li>
+<li id="g-giglio" data-gl="giglio"><span class="gl-term">Giglio material</span>Impeachment evidence, which undermines a witness's credibility, that the prosecution must disclose, extending Brady (Giglio v. United States, 1972).</li>
+<li id="g-exculpatory" data-gl="exculpatory"><span class="gl-term">Exculpatory</span>Evidence that tends to clear the accused or reduce culpability; the prosecution must disclose it.</li>
+<li id="g-chain" data-gl="chain"><span class="gl-term">Chain of custody</span>The documented, unbroken record of who handled a piece of evidence and when &mdash; which is how it is authenticated before admission.</li>
+<li id="g-compas" data-gl="compas"><span class="gl-term">COMPAS</span>A proprietary risk-assessment algorithm used in criminal cases; ProPublica's 2016 audit found it misclassified Black defendants as high-risk at roughly twice the rate of white defendants.</li>
+<li id="g-prose" data-gl="prose"><span class="gl-term">Pro se</span>A defendant who represents themselves without an attorney (Latin: &ldquo;for oneself&rdquo;). They carry counsel's burdens without legal training.</li>
+<li id="g-deliberations" data-gl="deliberations"><span class="gl-term">Jury deliberations</span>The closed discussion in which jurors decide guilt or innocence &mdash; by rule, on the admitted evidence alone.</li>
+<li id="g-blackbox" data-gl="blackbox"><span class="gl-term">Black box</span>A system whose internal reasoning cannot be inspected or explained &mdash; only the input and output are visible, not how the output was reached.</li>
+<li id="g-deskilling" data-gl="deskilling"><span class="gl-term">Deskilling</span>The slow erosion of a professional's own judgment after leaning on AI for too long.</li>
 </ul>
 </section>
 
@@ -3944,6 +3965,7 @@ The summary is convenient, but the summary is not the evidence. Every claim abov
 </main>
 </div>
 
+<button class="back-top" id="back" aria-label="Back to top">&uarr;</button>
 <script>
 if (new URLSearchParams(location.search).has('export')) document.body.classList.add('export-mode');
 document.addEventListener('keydown', e => {
@@ -3958,6 +3980,33 @@ const polObs = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.35 });
 document.querySelectorAll('.polaroid-row').forEach(el => polObs.observe(el));
+/* Glossary hover cards are filled from the glossary list, so each definition lives once. */
+document.querySelectorAll('.gloss[data-g]').forEach(el => {
+  const li = document.getElementById('g-' + el.dataset.g);
+  if (!li) throw new Error('glossary term without a definition: ' + el.dataset.g);
+  const card = document.createElement('span');
+  card.className = 'gloss-card';
+  card.innerHTML = '<span class="tt">' + li.querySelector('.gl-term').textContent + '</span>' +
+    li.innerHTML.replace(/^<span class="gl-term">.*?<\/span>/, '');
+  el.appendChild(card);
+});
+/* Progress rail, active sidebar link, back-to-top */
+const fill = document.getElementById('progressFill');
+const navLinks = [...document.querySelectorAll('.sidebar .nav a[href^="#"]')];
+const navTargets = navLinks.map(a => ({ a, el: document.getElementById(a.getAttribute('href').slice(1)) }));
+const back = document.getElementById('back');
+function onScroll() {
+  const max = document.documentElement.scrollHeight - window.innerHeight;
+  fill.style.width = (max > 0 ? window.scrollY / max * 100 : 0) + '%';
+  let cur = navTargets[0];
+  for (const t of navTargets) if (t.el.getBoundingClientRect().top - 120 <= 1) cur = t;
+  navLinks.forEach(l => l.classList.toggle('active', l === cur.a));
+  back.classList.toggle('show', window.scrollY > 500);
+}
+window.addEventListener('scroll', onScroll, { passive: true });
+window.addEventListener('resize', onScroll);
+onScroll();
+back.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 </script>
 <div class="floating-logo"><span class="paradigm-logo" role="img" aria-label="Paradigm Case Management"></span></div>
 </body>
